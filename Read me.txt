@@ -1,0 +1,28 @@
+
+Step 1:	Add below Nuget packages 
+
+<PackageReference Include="Hangfire" Version="1.8.4" />
+<PackageReference Include="Hangfire.Core" Version="1.8.4" />
+<PackageReference Include="Hangfire.SqlServer" Version="1.8.4" />
+<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+
+
+Step 2: Create Database and Table 
+
+Below is the table script
+CREATE TABLE PILOT(
+Id int identity(1,1)
+,Name nvarchar(100)
+,FlyingExperience int 
+,Status int
+,CreatedDate datetime
+)
+
+Step 3: Open the uploaded code and make sure build should succeed
+
+Step 4: Insert records through Swagger and url https://localhost:7298/swagger/index.html
+
+Step 5: While running the application access https://localhost:7298/hangfire
+We can see the Hangfire dashboard.
+
+Step 6: Check the console to see the background jobs
